@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <style>
+        .side {
+            background-image: linear-gradient(rgb(230, 175, 183), rgb(228, 72, 124));
+            height: 720px;
+            width: 30%;
+            float: left;
+        }
+
+        .side img {
+            height: 50%;
+            width: 110%;
+            float: left;
+        }
+
+        .side a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 40px;
+            color: hsl(0, 17%, 92%);
+            display: block;
+            text-align: center;
+        }
+
+        .side a:hover {
+            color: #081b85;
+        }
+        .photo{
+            background-color: black;
+            height: 720px;
+            width:70%;
+            float: left;
+        }
+        .box{
+            background-color: brown;
+            height:100%;
+            width:100%;
+        }
+        .photo img{
+            height: 100%;
+            width:70%;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="side">
+            <img src="parlour.png">
+            <a href="please.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="about.html"><i class="fa fa-fw fa-wrench"></i> About</a>
+            <a href="services.html"><i class="fa fa-fw fa-user"></i> Services</a>
+            <a href="training.html"><i class="fa fa-fw fa-envelope"></i> Trainings</a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        </div>
+        <div class="photo">
+            <div class="box" >
+                <img class="mySlides" src="b1.jpg" style="width:100%">
+                <img class="mySlides" src="b2.jpg" style="width:100%">
+                <img class="mySlides" src="a1.jpg" style="width:100%">
+                <img class="mySlides" src="a2.jpg" style="width:100%">
+              </div>
+              
+              <script>
+              var myIndex = 0;
+              carousel();
+              
+              function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+              }
+              </script>
+              
+        </div>
+    </header>
+</body>
+
+</html>
